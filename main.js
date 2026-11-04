@@ -1,6 +1,14 @@
 (function () {
   'use strict';
 
+  var theme = new URLSearchParams(window.location.search).get('theme');
+  if (theme && /^[a-z-]+$/.test(theme)) {
+    var themeLink = document.createElement('link');
+    themeLink.rel = 'stylesheet';
+    themeLink.href = 'themes/' + theme + '.css';
+    document.head.append(themeLink);
+  }
+
   var hours = document.querySelector('[data-hours]');
   var note = document.querySelector('[data-scent-note]');
   var chips = document.querySelectorAll('[data-scent]');
