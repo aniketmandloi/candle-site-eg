@@ -417,6 +417,35 @@ a {
   font-weight: 700;
 }
 
+.visit {
+  padding: clamp(160px, 22vh, 240px) var(--gutter) clamp(120px, 16vh, 200px);
+}
+
+.visit-statement {
+  max-width: 22ch;
+  margin: 0;
+  font-size: clamp(26px, 3vw, 44px);
+  line-height: 1.1;
+}
+
+.visit-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 48px 0 0;
+}
+
+.visit-links a {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--step-lead);
+  text-underline-offset: 4px;
+}
+
+.visit-links span {
+  color: var(--muted);
+}
+
 .bag {
   width: min(420px, calc(100vw - 32px));
   padding: 32px;
