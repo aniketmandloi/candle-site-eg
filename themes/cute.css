@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap");
+
+:root {
+  --bg: #f8f4ff;
+  --surface: #ece3ff;
+  --ink: #2f2257;
+  --muted: #6f6390;
+  --accent: #9be8c8;
+  --accent-ink: #2f2257;
+  --radius: 28px;
+  --font-display: "Fredoka", "Nunito", system-ui, sans-serif;
+  --font-text: "Nunito", system-ui, sans-serif;
+}
+
+.hero-title {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+  text-transform: none;
+}
+
+.hero-strip {
+  border-radius: 40px;
+}
+
+.section-title,
+.stage-verb {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.stage-verb {
+  text-transform: none;
+}
+
+.button,
+.bag-button,
+.scent-chip,
+.add-button,
+.text-button {
+  border-radius: 999px;
+  transition: transform 260ms cubic-bezier(0.34, 1.56, 0.64, 1), background-color 200ms ease, color 200ms ease;
+}
+
+.scent-chip[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.scent-table tbody th,
+.about-statement,
+.visit-links a {
+  font-weight: 600;
+}
+
+.bag {
+  border-radius: 32px;
+}
+
+.stage::after {
+  background: rgba(47, 34, 87, 0.35);
+}
+
+.site-footer {
+  background: var(--ink);
+}
+
+.footer-side .button:hover {
+  background: var(--bg);
+  color: var(--ink);
+}
