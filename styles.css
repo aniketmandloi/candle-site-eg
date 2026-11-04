@@ -295,6 +295,67 @@ a {
   transform: scale(0.97);
 }
 
+.making {
+  padding-top: clamp(120px, 16vh, 200px);
+}
+
+.making .section-title {
+  padding: 0 var(--gutter);
+}
+
+.stage {
+  position: relative;
+  height: 100svh;
+  min-height: 560px;
+  overflow: hidden;
+}
+
+.stage-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 42, 28, 0.45);
+}
+
+.stage-body {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: 0 var(--gutter);
+}
+
+.stage-verb {
+  position: sticky;
+  top: 50%;
+  margin: 0;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(96px, 17vw, 300px);
+  line-height: 0.85;
+  letter-spacing: -0.045em;
+  color: var(--bg);
+}
+
+.stage-text {
+  position: absolute;
+  left: var(--gutter);
+  bottom: clamp(32px, 8vh, 72px);
+  max-width: 34ch;
+  margin: 0;
+  font-size: var(--step-lead);
+  line-height: 1.4;
+  color: var(--bg);
+}
+
 .bag {
   width: min(420px, calc(100vw - 32px));
   padding: 32px;
@@ -389,5 +450,15 @@ a {
 
   .hero-strip {
     width: 2.2em;
+  }
+
+  .stage-verb {
+    font-size: 24vw;
+  }
+
+  .stage-text {
+    right: var(--gutter);
+    max-width: none;
+    font-size: var(--step-body);
   }
 }
