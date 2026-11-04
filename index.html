@@ -40,7 +40,77 @@
     <p class="scent-note" data-scent-note aria-live="polite">Cedar Ember: cedarwood, smoked vanilla, black pepper.</p>
     <a class="button hero-action" href="#scents">Shop the scents</a>
   </section>
+
+  <section id="scents" class="scents" aria-labelledby="scents-title">
+    <h2 id="scents-title" class="section-title">Six scents, each sold by its burn time</h2>
+    <table class="scent-table">
+      <thead>
+        <tr>
+          <th scope="col">Scent</th>
+          <th scope="col">Notes</th>
+          <th scope="col">Burns</th>
+          <th scope="col" class="num">Price</th>
+          <th scope="col"><span class="visually-hidden">Bag</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Cedar Ember</th>
+          <td>Cedarwood, smoked vanilla, black pepper</td>
+          <td>68 hours</td>
+          <td class="num">$36</td>
+          <td><button class="add-button" type="button" data-add data-name="Cedar Ember" data-price="36">Add to bag</button></td>
+        </tr>
+        <tr>
+          <th scope="row">Fig &amp; Sea Salt</th>
+          <td>Fig leaf, sea salt, bergamot</td>
+          <td>60 hours</td>
+          <td class="num">$34</td>
+          <td><button class="add-button" type="button" data-add data-name="Fig &amp; Sea Salt" data-price="34">Add to bag</button></td>
+        </tr>
+        <tr>
+          <th scope="row">Wild Rosemary</th>
+          <td>Rosemary, lemon peel, cedar</td>
+          <td>72 hours</td>
+          <td class="num">$34</td>
+          <td><button class="add-button" type="button" data-add data-name="Wild Rosemary" data-price="34">Add to bag</button></td>
+        </tr>
+        <tr>
+          <th scope="row">Honey Oat</th>
+          <td>Beeswax, oat milk, warm honey</td>
+          <td>80 hours</td>
+          <td class="num">$32</td>
+          <td><button class="add-button" type="button" data-add data-name="Honey Oat" data-price="32">Add to bag</button></td>
+        </tr>
+        <tr>
+          <th scope="row">Midnight Iris</th>
+          <td>Iris root, violet, dark musk</td>
+          <td>64 hours</td>
+          <td class="num">$38</td>
+          <td><button class="add-button" type="button" data-add data-name="Midnight Iris" data-price="38">Add to bag</button></td>
+        </tr>
+        <tr>
+          <th scope="row">Rain on Pine</th>
+          <td>Pine needle, wet stone, cold air</td>
+          <td>64 hours</td>
+          <td class="num">$36</td>
+          <td><button class="add-button" type="button" data-add data-name="Rain on Pine" data-price="36">Add to bag</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 </main>
+
+<dialog id="bag" class="bag" aria-labelledby="bag-title">
+  <h2 id="bag-title" class="bag-title">Your bag</h2>
+  <ul class="bag-items" data-bag-items></ul>
+  <p class="bag-empty" data-bag-empty>Your bag is empty.</p>
+  <p class="bag-total">Total <span data-bag-total>$0</span></p>
+  <div class="bag-actions">
+    <a class="button" href="#checkout">Checkout</a>
+    <button class="text-button" type="button" data-bag-close>Close</button>
+  </div>
+</dialog>
 
 <footer class="site-footer">
 </footer>

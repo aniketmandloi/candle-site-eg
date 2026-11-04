@@ -18,4 +18,68 @@
       choose(chip);
     });
   });
+
+  var BAG_KEY = 'wick-hour-bag';
+  var bag = document.getElementById('bag');
+  var bagItems = document.querySelector('[data-bag-items]');
+  var bagEmpty = document.querySelector('[data-bag-empty]');
+  var bagTotal = document.querySelector('[data-bag-total]');
+  var bagCount = document.querySelector('[data-bag-count]');
+
+  function readBag() {
+    try {
+      return JSON.parse(localStorage.getItem(BAG_KEY)) || [];
+    } catch (error) {
+      return [];
+    }
+  }
+
+  function writeBag(items) {
+    try {
+      localStorage.setItem(BAG_KEY, JSON.stringify(items));
+    } catch (error) {
+      return;
+    }
+  }
+
+  function renderBag(items) {
+    var total = items.reduce(function (sum, item) {
+      return sum + item.price;
+    }, 0);
+
+    bagCount.textContent = items.length;
+    bagTotal.textContent = '$' + total;
+    bagEmpty.hidden = items.length > 0;
+    bagItems.textContent = '';
+
+    items.forEach(function (item) {
+      var row = document.createElement('li');
+      var name = document.createElement('span');
+      var price = document.createElement('span');
+      row.className = 'bag-item';
+      name.textContent = item.name;
+      price.textContent = '$' + item.price;
+      row.append(name, price);
+      bagItems.append(row);
+    });
+  }
+
+  var items = readBag();
+  renderBag(items);
+
+  document.querySelectorAll('[data-add]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      items = items.concat([{ name: button.dataset.name, price: Number(button.dataset.price) }]);
+      writeBag(items);
+      renderBag(items);
+    });
+  });
+
+  document.querySelector('.bag-button').addEventListener('click', function () {
+    bag.showModal();
+  });
+
+  document.querySelector('[data-bag-close]').addEventListener('click', function () {
+    bag.close();
+  });
 })();
