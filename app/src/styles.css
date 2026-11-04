@@ -1,0 +1,37 @@
+:root {
+  --bg: #17110c;
+  --surface: #241c15;
+  --ink: #f5e9d6;
+  --muted: #b5a48f;
+  --accent: #ffb04a;
+  --accent-ink: #17110c;
+  --font-display: "DM Serif Display", Georgia, serif;
+  --font-text: "Source Serif 4", Georgia, serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  padding: 20px 24px;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-size: 20px;
+  text-decoration: none;
+}
