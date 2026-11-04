@@ -10,6 +10,7 @@
   --scrim: rgba(23, 17, 12, 0.55);
   --footer: #0d0a07;
   --footer-ink: #f5e9d6;
+  --on-photo: #f5e9d6;
 }
 
 :root[data-theme="light"] {
@@ -23,6 +24,7 @@
   --scrim: rgba(42, 28, 16, 0.45);
   --footer: #2a1c10;
   --footer-ink: #f6eee0;
+  --on-photo: #f6eee0;
 }
 
 :root {
@@ -455,5 +457,79 @@ a {
   .scent-table td:last-child {
     grid-column: 2 / -1;
     text-align: left;
+  }
+}
+
+.making {
+  padding-top: clamp(120px, 16vh, 200px);
+}
+
+.making .section-title {
+  padding: 0 var(--gutter);
+}
+
+.stage {
+  position: relative;
+  height: 100svh;
+  min-height: 560px;
+  overflow: hidden;
+}
+
+.stage-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--scrim);
+}
+
+.stage-body {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: 0 var(--gutter);
+}
+
+.stage-verb {
+  position: sticky;
+  top: 50%;
+  margin: 0;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(96px, 17vw, 300px);
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  color: var(--on-photo);
+}
+
+.stage-text {
+  position: absolute;
+  left: var(--gutter);
+  bottom: clamp(32px, 8vh, 72px);
+  max-width: 34ch;
+  margin: 0;
+  font-size: var(--step-lead);
+  line-height: 1.4;
+  color: var(--on-photo);
+}
+
+@media (max-width: 640px) {
+  .stage-verb {
+    font-size: 24vw;
+  }
+
+  .stage-text {
+    right: var(--gutter);
+    max-width: none;
+    font-size: var(--step-body);
   }
 }

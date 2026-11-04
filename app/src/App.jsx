@@ -2,6 +2,7 @@ import { useState } from 'react';
 import BagDialog from './components/BagDialog.jsx';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
+import Making from './components/Making.jsx';
 import Scents from './components/Scents.jsx';
 import { useBag } from './hooks/useBag.js';
 import { useTheme } from './hooks/useTheme.js';
@@ -26,6 +27,7 @@ export default function App() {
       <main id="main">
         <Hero scent={scent} onChoose={setScentId} />
         <Scents onAdd={bag.add} />
+        <Making />
       </main>
       <BagDialog open={bagOpen} items={bag.items} onClose={() => setBagOpen(false)} />
     </>
