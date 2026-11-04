@@ -26,6 +26,20 @@
 </header>
 
 <main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <h1 id="hero-title" class="hero-title">Burns <img class="hero-strip" src="assets/flame.jpg" alt="a candle flame" width="1920" height="1277"> for <span data-hours>68</span> hours.</h1>
+    <p class="hero-lede">Small-batch candles, poured by hand. Every one is sold by how long it burns.</p>
+    <div class="scent-picker" role="group" aria-label="Choose a scent">
+      <button class="scent-chip" type="button" aria-pressed="true" data-scent data-hours="68" data-notes="cedarwood, smoked vanilla, black pepper">Cedar Ember</button>
+      <button class="scent-chip" type="button" aria-pressed="false" data-scent data-hours="60" data-notes="fig leaf, sea salt, bergamot">Fig &amp; Sea Salt</button>
+      <button class="scent-chip" type="button" aria-pressed="false" data-scent data-hours="72" data-notes="rosemary, lemon peel, cedar">Wild Rosemary</button>
+      <button class="scent-chip" type="button" aria-pressed="false" data-scent data-hours="80" data-notes="beeswax, oat milk, warm honey">Honey Oat</button>
+      <button class="scent-chip" type="button" aria-pressed="false" data-scent data-hours="64" data-notes="iris root, violet, dark musk">Midnight Iris</button>
+      <button class="scent-chip" type="button" aria-pressed="false" data-scent data-hours="64" data-notes="pine needle, wet stone, cold air">Rain on Pine</button>
+    </div>
+    <p class="scent-note" data-scent-note aria-live="polite">Cedar Ember: cedarwood, smoked vanilla, black pepper.</p>
+    <a class="button hero-action" href="#scents">Shop the scents</a>
+  </section>
 </main>
 
 <footer class="site-footer">
