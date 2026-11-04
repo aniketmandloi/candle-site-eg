@@ -446,6 +446,81 @@ a {
   color: var(--muted);
 }
 
+.site-footer {
+  overflow: hidden;
+  padding: clamp(96px, 14vh, 160px) var(--gutter) 0;
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.invitation {
+  max-width: 12ch;
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(40px, 5.2vw, 84px);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.footer-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.footer-side .button {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.footer-side .button:hover {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  font-family: var(--font-display);
+  font-size: var(--step-small);
+}
+
+.footer-links a {
+  text-underline-offset: 4px;
+}
+
+.credits {
+  margin: 96px 0 24px;
+  font-size: var(--step-small);
+  line-height: 1.5;
+}
+
+.credits a {
+  text-underline-offset: 3px;
+}
+
+.footer-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 27vw;
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+  transform: translateY(30%);
+}
+
 .bag {
   width: min(420px, calc(100vw - 32px));
   padding: 32px;
