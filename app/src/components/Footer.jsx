@@ -4,8 +4,8 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-top">
-        <p className="invitation">Light one tonight.</p>
-        <div className="footer-side">
+        <p className="invitation" data-reveal>Light one tonight.</p>
+        <div className="footer-side" data-reveal>
           <a className="button" href="#scents">Shop the scents</a>
           <nav className="footer-links" aria-label="Footer">
             <a href="#scents">Scents</a>
@@ -16,7 +16,7 @@ export default function Footer() {
           </nav>
         </div>
       </div>
-      <section className="credits" aria-label="Picture credits">
+      <section className="credits" aria-label="Picture credits" data-reveal>
         <h2 className="credits-title">Pictures</h2>
         <ul>
           {credits.map((credit) => (

@@ -3,7 +3,7 @@ import { scents } from '../data/scents.js';
 export default function Scents({ onAdd }) {
   return (
     <section id="scents" className="scents" aria-labelledby="scents-title">
-      <h2 id="scents-title" className="section-title">Six scents, each sold by its burn time</h2>
+      <h2 id="scents-title" className="section-title" data-reveal>Six scents, each sold by its burn time</h2>
       <table className="scent-table">
         <thead>
           <tr>
@@ -17,7 +17,7 @@ export default function Scents({ onAdd }) {
         </thead>
         <tbody>
           {scents.map((scent) => (
-            <tr key={scent.id}>
+            <tr key={scent.id} data-reveal>
               <td><img className="scent-thumb" src={scent.image} alt="" width="84" height="84" loading="lazy" /></td>
               <th scope="row">{scent.name}</th>
               <td>{scent.notes}</td>

@@ -9,8 +9,8 @@ export default function Hero({ scent, onChoose }) {
         <img className="hero-strip" src={flame} alt="a candle flame" width="1920" height="1277" />{' '}
         for <span>{scent.hours}</span> hours.
       </h1>
-      <p className="hero-lede">Small-batch candles, poured by hand. Every one is sold by how long it burns.</p>
-      <div className="scent-picker" role="group" aria-label="Choose a scent">
+      <p className="hero-lede" data-reveal>Small-batch candles, poured by hand. Every one is sold by how long it burns.</p>
+      <div className="scent-picker" data-reveal role="group" aria-label="Choose a scent">
         {scents.map((item) => (
           <button
             key={item.id}

@@ -41,7 +41,7 @@ const stages = [
 export default function Making() {
   return (
     <section id="making" className="making" aria-labelledby="making-title">
-      <h2 id="making-title" className="section-title">How a candle is made</h2>
+      <h2 id="making-title" className="section-title" data-reveal>How a candle is made</h2>
       {stages.map((stage) => (
         <article className="stage" key={stage.verb}>
           <img className="stage-photo" src={stage.image} alt={stage.alt} width={stage.width} height={stage.height} loading="lazy" />

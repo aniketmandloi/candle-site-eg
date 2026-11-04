@@ -9,6 +9,7 @@ import Making from './components/Making.jsx';
 import Scents from './components/Scents.jsx';
 import Visit from './components/Visit.jsx';
 import { useBag } from './hooks/useBag.js';
+import { useReveal } from './hooks/useReveal.js';
 import { useTheme } from './hooks/useTheme.js';
 import { scents } from './data/scents.js';
 
@@ -17,6 +18,7 @@ export default function App() {
   const [scentId, setScentId] = useState(scents[0].id);
   const [bagOpen, setBagOpen] = useState(false);
   const bag = useBag();
+  useReveal();
   const scent = scents.find((item) => item.id === scentId);
 
   return (

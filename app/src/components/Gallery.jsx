@@ -15,10 +15,10 @@ const pictures = [
 export default function Gallery() {
   return (
     <section id="gallery" className="gallery" aria-labelledby="gallery-title">
-      <h2 id="gallery-title" className="section-title">Light, at the end of the day</h2>
+      <h2 id="gallery-title" className="section-title" data-reveal>Light, at the end of the day</h2>
       <ul className="gallery-grid">
         {pictures.map((picture) => (
-          <li key={picture.caption} className={`gallery-item gallery-item--${picture.size}`}>
+          <li key={picture.caption} className={`gallery-item gallery-item--${picture.size}`} data-reveal>
             <figure>
               <img src={picture.image} alt={picture.alt} loading="lazy" />
               <figcaption>{picture.caption}</figcaption>
