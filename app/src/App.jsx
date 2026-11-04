@@ -6,6 +6,7 @@ import Hero from './components/Hero.jsx';
 import Gallery from './components/Gallery.jsx';
 import Making from './components/Making.jsx';
 import Scents from './components/Scents.jsx';
+import Visit from './components/Visit.jsx';
 import { useBag } from './hooks/useBag.js';
 import { useTheme } from './hooks/useTheme.js';
 import { scents } from './data/scents.js';
@@ -32,6 +33,7 @@ export default function App() {
         <Making />
         <Gallery />
         <About />
+        <Visit />
       </main>
       <BagDialog open={bagOpen} items={bag.items} onClose={() => setBagOpen(false)} />
     </>
