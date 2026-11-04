@@ -1,4 +1,4 @@
-export default function Header({ theme, onToggleTheme }) {
+export default function Header({ theme, onToggleTheme, bagCount, onOpenBag }) {
   const next = theme === 'dark' ? 'light' : 'dark';
 
   return (
@@ -11,9 +11,14 @@ export default function Header({ theme, onToggleTheme }) {
         <a href="#about">About</a>
         <a href="#visit">Visit</a>
       </nav>
-      <button className="theme-toggle" type="button" onClick={onToggleTheme} aria-label={`Switch to ${next} theme`}>
-        {next === 'light' ? 'Light' : 'Dark'}
-      </button>
+      <div className="header-actions">
+        <button className="theme-toggle" type="button" onClick={onToggleTheme} aria-label={`Switch to ${next} theme`}>
+          {next === 'light' ? 'Light' : 'Dark'}
+        </button>
+        <button className="bag-button" type="button" onClick={onOpenBag}>
+          Bag <span>{bagCount}</span>
+        </button>
+      </div>
     </header>
   );
 }
