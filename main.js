@@ -82,4 +82,43 @@
   document.querySelector('[data-bag-close]').addEventListener('click', function () {
     bag.close();
   });
+
+  document.documentElement.classList.add('js');
+
+  var targets = document.querySelectorAll(
+    '.section-title, .hero-lede, .scent-picker, .scent-table tbody tr, .about-figure, .about-text, ' +
+    '.visit-statement, .visit-links, .invitation, .footer-side, .credits'
+  );
+  var stages = document.querySelectorAll('.stage');
+
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(function (el) {
+      el.classList.add('is-in');
+    });
+    stages.forEach(function (el) {
+      el.classList.add('is-in');
+    });
+    return;
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  targets.forEach(function (el) {
+    var siblings = el.parentNode.children;
+    var position = Array.prototype.indexOf.call(siblings, el);
+    el.classList.add('reveal');
+    el.style.setProperty('--delay', Math.min(position, 4) * 80 + 'ms');
+    observer.observe(el);
+  });
+
+  stages.forEach(function (el) {
+    observer.observe(el);
+  });
 })();
