@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import About from './components/About.jsx';
 import BagDialog from './components/BagDialog.jsx';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
@@ -30,6 +31,7 @@ export default function App() {
         <Scents onAdd={bag.add} />
         <Making />
         <Gallery />
+        <About />
       </main>
       <BagDialog open={bagOpen} items={bag.items} onClose={() => setBagOpen(false)} />
     </>
