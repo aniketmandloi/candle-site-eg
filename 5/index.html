@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wick &amp; Hour · Candles sold by how long they burn</title>
+<meta name="description" content="Small-batch candles, poured by hand and sold by burn time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../themes/grid.css">
+<script src="../main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <a class="wordmark" href="#top">Wick &amp; Hour</a>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="#scents">Scents</a>
+    <a href="#making">Making</a>
+    <a href="#about">About</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <button class="bag-button" type="button" aria-controls="bag">Bag <span data-bag-count>0</span></button>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <h1 id="hero-title" class="hero-title">Burns <img class="hero-strip" src="../assets/flame.jpg" alt="a candle flame" width="1920" height="1277"> for <span data-hours>68</span> hours.</h1>
+    <p class="hero-lede">Small-batch candles, poured by hand. Every one is sold by how long it burns.</p>
+    <div class="scent-picker" role="group" aria-label="Choose a scent">
+      <button class="scent-chip" type="button" aria-pressed="true" data-scent data-hours="68" data-notes="cedarwood, smoked vanilla, black pepper">Cedar Ember</button>
+      <button class="scent-chip" type="button" aria-pressed="false" data-scent data-hours="60" data-notes="fig leaf, sea salt, bergamot">Fig &amp; Sea Salt</button>
+      <button class="scent-chip" type="button" aria-pressed="false" data-scent data-hours="72" data-notes="rosemary, lemon peel, cedar">Wild Rosemary</button>
+      <button class="scent-chip" type="button" aria-pressed="false" data-scent data-hours="80" data-notes="beeswax, oat milk, warm honey">Honey Oat</button>
+      <button class="scent-chip" type="button" aria-pressed="false" data-scent data-hours="64" data-notes="iris root, violet, dark musk">Midnight Iris</button>
+      <button class="scent-chip" type="button" aria-pressed="false" data-scent data-hours="64" data-notes="pine needle, wet stone, cold air">Rain on Pine</button>
+    </div>
+    <p class="scent-note" data-scent-note aria-live="polite">Cedar Ember: cedarwood, smoked vanilla, black pepper.</p>
+    <a class="button hero-action" href="#scents">Shop the scents</a>
+  </section>
+
+  <section id="scents" class="scents" aria-labelledby="scents-title">
+    <h2 id="scents-title" class="section-title">Six scents, each sold by its burn time</h2>
+    <table class="scent-table">
+      <thead>
+        <tr>
+          <th scope="col">Scent</th>
+          <th scope="col">Notes</th>
+          <th scope="col">Burns</th>
+          <th scope="col" class="num">Price</th>
+          <th scope="col"><span class="visually-hidden">Bag</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Cedar Ember</th>
+          <td>Cedarwood, smoked vanilla, black pepper</td>
+          <td>68 hours</td>
+          <td class="num">$36</td>
+          <td><button class="add-button" type="button" data-add data-name="Cedar Ember" data-price="36">Add to bag</button></td>
+        </tr>
+        <tr>
+          <th scope="row">Fig &amp; Sea Salt</th>
+          <td>Fig leaf, sea salt, bergamot</td>
+          <td>60 hours</td>
+          <td class="num">$34</td>
+          <td><button class="add-button" type="button" data-add data-name="Fig &amp; Sea Salt" data-price="34">Add to bag</button></td>
+        </tr>
+        <tr>
+          <th scope="row">Wild Rosemary</th>
+          <td>Rosemary, lemon peel, cedar</td>
+          <td>72 hours</td>
+          <td class="num">$34</td>
+          <td><button class="add-button" type="button" data-add data-name="Wild Rosemary" data-price="34">Add to bag</button></td>
+        </tr>
+        <tr>
+          <th scope="row">Honey Oat</th>
+          <td>Beeswax, oat milk, warm honey</td>
+          <td>80 hours</td>
+          <td class="num">$32</td>
+          <td><button class="add-button" type="button" data-add data-name="Honey Oat" data-price="32">Add to bag</button></td>
+        </tr>
+        <tr>
+          <th scope="row">Midnight Iris</th>
+          <td>Iris root, violet, dark musk</td>
+          <td>64 hours</td>
+          <td class="num">$38</td>
+          <td><button class="add-button" type="button" data-add data-name="Midnight Iris" data-price="38">Add to bag</button></td>
+        </tr>
+        <tr>
+          <th scope="row">Rain on Pine</th>
+          <td>Pine needle, wet stone, cold air</td>
+          <td>64 hours</td>
+          <td class="num">$36</td>
+          <td><button class="add-button" type="button" data-add data-name="Rain on Pine" data-price="36">Add to bag</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="making" class="making" aria-labelledby="making-title">
+    <h2 id="making-title" class="section-title">How a candle is made</h2>
+    <article class="stage">
+      <img class="stage-photo" src="../assets/pouring.jpg" alt="Candles being poured into moulds" width="1920" height="1440" loading="lazy">
+      <div class="stage-body">
+        <h3 class="stage-verb">Pour</h3>
+        <p class="stage-text">Wax goes into the mould while it is still warm, so the surface sets smooth.</p>
+      </div>
+    </article>
+    <article class="stage">
+      <img class="stage-photo" src="../assets/moulds.jpg" alt="An engraved print of men working with candle moulds in a workshop" width="1920" height="1629" loading="lazy">
+      <div class="stage-body">
+        <h3 class="stage-verb">Trim</h3>
+        <p class="stage-text">Each wick is cut to a fixed length before the first light, so every burn starts even.</p>
+      </div>
+    </article>
+    <article class="stage">
+      <img class="stage-photo" src="../assets/wax.jpg" alt="Wax being worked by hand" width="1920" height="1440" loading="lazy">
+      <div class="stage-body">
+        <h3 class="stage-verb">Cure</h3>
+        <p class="stage-text">Each candle rests for two weeks, so the scent settles into the wax before it is packed.</p>
+      </div>
+    </article>
+    <article class="stage">
+      <img class="stage-photo" src="../assets/orb-light.jpg" alt="A candle flame projected through a glass orb onto a table" width="1920" height="1080" loading="lazy">
+      <div class="stage-body">
+        <h3 class="stage-verb">Light</h3>
+        <p class="stage-text">Let the first burn reach the edge of the jar. That keeps every burn after it even.</p>
+      </div>
+    </article>
+  </section>
+
+  <section id="about" class="about" aria-labelledby="about-title">
+    <h2 id="about-title" class="section-title">About us</h2>
+    <figure class="about-figure">
+      <img src="../assets/mould-1947.jpg" alt="A candle mould from a museum collection" width="1920" height="1280" loading="lazy">
+      <figcaption>A candle mould, 1947, from a museum collection.</figcaption>
+    </figure>
+    <div class="about-text">
+      <p class="about-statement">Wick &amp; Hour started at a kitchen table, pouring small batches for friends.</p>
+      <p>We still pour every batch by hand, in soy and beeswax, and keep batches small enough to check each candle before it is sold.</p>
+      <p>Every label carries the burn time, because that is the honest measure of a candle: how long it lights a room.</p>
+      <dl class="about-facts">
+        <div>
+          <dt>Waxes</dt>
+          <dd>Soy and beeswax</dd>
+        </div>
+        <div>
+          <dt>Batch size</dt>
+          <dd>Under 40 candles</dd>
+        </div>
+        <div>
+          <dt>Shipping</dt>
+          <dd>Within 3 working days</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="visit" class="visit" aria-labelledby="visit-title">
+    <h2 id="visit-title" class="section-title">Visit and write</h2>
+    <p class="visit-statement">Write to us about a wedding order, a gift for someone who has everything, or a candle that burned too fast.</p>
+    <p class="visit-links">
+      <a href="mailto:hello@wickandhour.example?subject=Hello%20from%20the%20website">hello@wickandhour.example</a>
+      <span>Replies within two working days.</span>
+    </p>
+  </section>
+</main>
+
+<dialog id="bag" class="bag" aria-labelledby="bag-title">
+  <h2 id="bag-title" class="bag-title">Your bag</h2>
+  <ul class="bag-items" data-bag-items></ul>
+  <p class="bag-empty" data-bag-empty>Your bag is empty.</p>
+  <p class="bag-total">Total <span data-bag-total>$0</span></p>
+  <div class="bag-actions">
+    <a class="button" href="#checkout">Checkout</a>
+    <button class="text-button" type="button" data-bag-close>Close</button>
+  </div>
+</dialog>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <p class="invitation">Light one tonight.</p>
+    <div class="footer-side">
+      <a class="button" href="#scents">Shop the scents</a>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#scents">Scents</a>
+        <a href="#making">Making</a>
+        <a href="#about">About</a>
+        <a href="#visit">Visit</a>
+      </nav>
+    </div>
+  </div>
+  <p class="credits">Pictures: <a href="https://commons.wikimedia.org/w/index.php?curid=45980204">“Candle flame closeup”</a> by domdomegg, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, via Wikimedia Commons; <a href="https://commons.wikimedia.org/w/index.php?curid=20401664">“Candlemaking, candle molds, poured candles”</a> by WillieWax, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons; <a href="https://commons.wikimedia.org/w/index.php?curid=36634738">“Four men are working with moulds for candle-making. Coloured”</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, via Wikimedia Commons; <a href="https://commons.wikimedia.org/w/index.php?curid=87455462">“Mould, candle”</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, via Wikimedia Commons; <a href="https://commons.wikimedia.org/wiki/File:Candle_light_projected_through_a_glass_orb.jpg">“Candle light projected through a glass orb”</a> by W.carter, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons; <a href="https://commons.wikimedia.org/w/index.php?curid=148181521">“Weaving candle wax”</a> by Warmglow, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en/">CC0</a>, via Wikimedia Commons.</p>
+  <p class="footer-name" aria-hidden="true">Wick &amp; Hour</p>
+</footer>
+</body>
+</html>
