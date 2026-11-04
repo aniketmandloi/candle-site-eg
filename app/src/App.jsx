@@ -3,6 +3,7 @@ import About from './components/About.jsx';
 import BagDialog from './components/BagDialog.jsx';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
+import Footer from './components/Footer.jsx';
 import Gallery from './components/Gallery.jsx';
 import Making from './components/Making.jsx';
 import Scents from './components/Scents.jsx';
@@ -35,6 +36,7 @@ export default function App() {
         <About />
         <Visit />
       </main>
+      <Footer />
       <BagDialog open={bagOpen} items={bag.items} onClose={() => setBagOpen(false)} />
     </>
   );
