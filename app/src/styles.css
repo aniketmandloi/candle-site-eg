@@ -254,22 +254,29 @@ a {
   margin-top: 36px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 860px) {
   .hero {
-    align-items: flex-end;
-    min-height: calc(100svh - 64px);
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
   }
 
   .hero-photo {
-    height: 58%;
-    object-position: 78% 50%;
+    position: static;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    max-height: 52svh;
+    object-position: 75% 50%;
   }
 
   .hero-body {
-    padding-top: 40svh;
-    padding-bottom: 40px;
+    max-width: none;
+    padding-top: 32px;
+    padding-bottom: 56px;
   }
+}
 
+@media (max-width: 640px) {
   .hero-title {
     font-size: 13vw;
   }
@@ -549,7 +556,15 @@ a {
 
 @media (max-width: 480px) {
   .product-grid {
-    grid-template-columns: 1fr;
+    gap: 40px 12px;
+  }
+
+  .product-notes {
+    font-size: var(--step-small);
+  }
+
+  .add-button {
+    padding: 0 16px;
   }
 }
 
