@@ -6,13 +6,13 @@ export default function Footer() {
       <div className="footer-top">
         <p className="invitation" data-reveal>Light one tonight.</p>
         <div className="footer-side" data-reveal>
-          <a className="button" href="#scents">Shop the scents</a>
+          <a className="button button--light" href="#scents">Shop the scents</a>
           <nav className="footer-links" aria-label="Footer">
             <a href="#scents">Scents</a>
+            <a href="#about">Our story</a>
             <a href="#making">Making</a>
             <a href="#gallery">Gallery</a>
-            <a href="#about">About</a>
-            <a href="#visit">Visit</a>
+            <a href="#visit">Contact</a>
           </nav>
         </div>
       </div>
