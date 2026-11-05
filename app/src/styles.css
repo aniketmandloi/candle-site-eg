@@ -257,9 +257,8 @@ a {
   color: var(--bar);
 }
 
-.has-pill .scent-chip[aria-pressed="true"] {
-  background: transparent;
-  transition: transform 160ms ease, background-color 0ms, color 200ms ease 200ms;
+.scent-chip[aria-pressed="true"] {
+  transition: transform 160ms ease, background-color 0ms linear 440ms, color 200ms ease 200ms;
 }
 
 .hero-hours {

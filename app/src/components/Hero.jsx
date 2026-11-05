@@ -56,7 +56,7 @@ export default function Hero({ scent, onChoose }) {
           Burns for <span className="hero-hours">{hours}</span> hours.
         </h1>
         <p className="hero-lede" data-reveal>Small-batch candles, poured by hand and sold by how long they burn.</p>
-        <div ref={pickerRef} className={`scent-picker${pill ? ' has-pill' : ''}`} data-reveal role="group" aria-label="Choose a scent">
+        <div ref={pickerRef} className="scent-picker" data-reveal role="group" aria-label="Choose a scent">
           {pill && (
             <span
               className="scent-pill"
