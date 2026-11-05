@@ -1,4 +1,4 @@
-import cedar from '../assets/photos/scent-cedar.jpg';
+import cedar from '../assets/photos/scent-cedar-bark.jpg';
 import fig from '../assets/photos/scent-fig.webp';
 import rosemary from '../assets/photos/scent-rosemary.webp';
 import honey from '../assets/photos/scent-honey.jpg';

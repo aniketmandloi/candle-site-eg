@@ -138,30 +138,6 @@
     "saved": "2026-11-04T10:19:22.600Z"
   },
   {
-    "file": "app/src/assets/photos/scent-cedar.jpg",
-    "media": "image",
-    "ref": "openverse:ec00fb0e-0b15-4aac-8b54-2594627b3482",
-    "title": "Cedar wood oil",
-    "creator": "Ajay Kumar Chaurasiya",
-    "creatorUrl": "https://commons.wikimedia.org/wiki/User:Ajay_Kumar_Chaurasiya",
-    "date": null,
-    "license": "CC BY-SA 4.0",
-    "licenseCode": "by-sa",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-    "creditRequired": true,
-    "page": "https://commons.wikimedia.org/w/index.php?curid=113879311",
-    "via": "Wikimedia Commons",
-    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Cedar_wood_oil.jpg/1920px-Cedar_wood_oil.jpg",
-    "width": 1920,
-    "height": 1440,
-    "bytes": 224500,
-    "credit": "\"Cedar wood oil\" by Ajay Kumar Chaurasiya, CC BY-SA 4.0, via Wikimedia Commons",
-    "notes": [
-      "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
-    ],
-    "saved": "2026-11-04T10:19:56.715Z"
-  },
-  {
     "file": "app/src/assets/photos/scent-fig.webp",
     "media": "image",
     "ref": "openverse:ad3223a2-ff69-4167-94a9-57c3a951bbb6",
@@ -494,5 +470,29 @@
     "credit": "\"Burning candle dark\", CC0, via rawpixel",
     "notes": [],
     "saved": "2026-11-05T06:17:29.754Z"
+  },
+  {
+    "file": "app/src/assets/photos/scent-cedar-bark.jpg",
+    "media": "image",
+    "ref": "commons:70788462",
+    "title": "Bark of Atlas Cedar",
+    "creator": "Krzysztof Golik",
+    "creatorUrl": null,
+    "date": "2018-07-02",
+    "license": "CC BY-SA 4.0",
+    "licenseCode": "by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "creditRequired": true,
+    "page": "https://commons.wikimedia.org/wiki/File:Bark_of_Atlas_Cedar.jpg",
+    "via": "Wikimedia Commons",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Bark_of_Atlas_Cedar.jpg/1920px-Bark_of_Atlas_Cedar.jpg",
+    "width": 1920,
+    "height": 982,
+    "bytes": 908013,
+    "credit": "\"Bark of Atlas Cedar\" by Krzysztof Golik, CC BY-SA 4.0, via Wikimedia Commons",
+    "notes": [
+      "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
+    ],
+    "saved": "2026-11-05T06:23:14.761Z"
   }
 ]
