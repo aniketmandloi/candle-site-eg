@@ -382,75 +382,95 @@ a {
 }
 
 .scents {
-  padding: clamp(120px, 16vh, 200px) var(--gutter) 0;
+  padding: clamp(120px, 16vh, 180px) var(--gutter) 0;
 }
 
 .section-title {
   margin: 0 0 56px;
-  max-width: 16ch;
   font-family: var(--font-display);
   font-weight: 400;
   font-size: var(--step-head);
-  line-height: 1;
+  line-height: 1.05;
   letter-spacing: -0.01em;
 }
 
-.scent-table {
+.section-title--centre {
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 64px 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product-photo {
   width: 100%;
-  border-collapse: collapse;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transition: transform 160ms ease;
 }
 
-.scent-table th,
-.scent-table td {
-  padding: 18px 16px 18px 0;
-  text-align: left;
-  vertical-align: middle;
-}
-
-.scent-table thead th {
-  font-size: var(--step-small);
-  color: var(--muted);
-}
-
-.scent-table tbody th {
+.product-name {
+  margin: 24px 0 0;
   font-family: var(--font-display);
   font-weight: 400;
   font-size: var(--step-lead);
-  white-space: nowrap;
+  line-height: 1.2;
 }
 
-.scent-table .num {
-  text-align: right;
+.product-notes {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.product-price {
+  display: flex;
+  gap: 16px;
+  margin: 8px 0 0;
+  font-weight: 600;
   font-variant-numeric: tabular-nums;
-}
-
-.scent-table td:last-child {
-  text-align: right;
-  padding-right: 0;
-}
-
-.scent-thumb {
-  width: 84px;
-  height: 84px;
-  object-fit: cover;
-  border-radius: var(--radius);
 }
 
 .add-button,
 .text-button {
-  font-family: var(--font-display);
-  font-size: 14px;
+  min-height: 44px;
+  font-family: var(--font-text);
+  font-size: 15px;
+  font-weight: 600;
   line-height: 1;
   border: 0;
   border-radius: var(--radius);
-  background: var(--surface);
-  color: var(--ink);
-  padding: 12px 16px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 0 24px;
   cursor: pointer;
   transition: transform 160ms ease, background-color 160ms ease, color 160ms ease;
 }
 
-.add-button:hover,
+.add-button {
+  margin-top: 20px;
+}
+
+.text-button {
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.add-button:hover {
+  background: var(--muted);
+}
+
 .text-button:hover {
   background: var(--ink);
   color: var(--bg);
@@ -459,6 +479,15 @@ a {
 .add-button:active,
 .text-button:active {
   transform: scale(0.97);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .bag {
@@ -511,41 +540,16 @@ a {
   margin-top: 28px;
 }
 
-@media (max-width: 640px) {
-  .scent-table thead {
-    display: none;
+@media (max-width: 860px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 16px;
   }
+}
 
-  .scent-table,
-  .scent-table tbody {
-    display: block;
-  }
-
-  .scent-table tr {
-    display: grid;
-    grid-template-columns: 84px 1fr auto;
-    gap: 6px 16px;
-    align-items: center;
-    padding: 20px 0;
-  }
-
-  .scent-table th,
-  .scent-table td {
-    padding: 0;
-  }
-
-  .scent-table td:first-child {
-    grid-row: span 4;
-  }
-
-  .scent-table td:nth-child(5) {
-    grid-column: 3;
-    grid-row: 1;
-  }
-
-  .scent-table td:last-child {
-    grid-column: 2 / -1;
-    text-align: left;
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
   }
 }
 

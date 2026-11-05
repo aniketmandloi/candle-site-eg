@@ -3,33 +3,23 @@ import { scents } from '../data/scents.js';
 export default function Scents({ onAdd }) {
   return (
     <section id="scents" className="scents" aria-labelledby="scents-title">
-      <h2 id="scents-title" className="section-title" data-reveal>Six scents, each sold by its burn time</h2>
-      <table className="scent-table">
-        <thead>
-          <tr>
-            <th scope="col"><span className="visually-hidden">Ingredient</span></th>
-            <th scope="col">Scent</th>
-            <th scope="col">Notes</th>
-            <th scope="col">Burns</th>
-            <th scope="col" className="num">Price</th>
-            <th scope="col"><span className="visually-hidden">Bag</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          {scents.map((scent) => (
-            <tr key={scent.id} data-reveal>
-              <td><img className="scent-thumb" src={scent.image} alt="" width="84" height="84" loading="lazy" /></td>
-              <th scope="row">{scent.name}</th>
-              <td>{scent.notes}</td>
-              <td>{scent.hours} hours</td>
-              <td className="num">${scent.price}</td>
-              <td>
-                <button className="add-button" type="button" onClick={() => onAdd(scent)}>Add to bag</button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <h2 id="scents-title" className="section-title section-title--centre" data-reveal>Our scents</h2>
+      <ul className="product-grid">
+        {scents.map((scent) => (
+          <li key={scent.id} className="product" data-reveal>
+            <img className="product-photo" src={scent.image} alt="" width="800" height="800" loading="lazy" />
+            <h3 className="product-name">{scent.name}</h3>
+            <p className="product-notes">{scent.notes}</p>
+            <p className="product-price">
+              <span>{scent.hours} hours</span>
+              <span>${scent.price}</span>
+            </p>
+            <button className="add-button" type="button" onClick={() => onAdd(scent)}>
+              Add to bag<span className="visually-hidden">: {scent.name}</span>
+            </button>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }
