@@ -41,16 +41,18 @@ const stages = [
 export default function Making() {
   return (
     <section id="making" className="making" aria-labelledby="making-title">
-      <h2 id="making-title" className="section-title" data-reveal>How a candle is made</h2>
-      {stages.map((stage) => (
-        <article className="stage" key={stage.verb}>
-          <img className="stage-photo" src={stage.image} alt={stage.alt} width={stage.width} height={stage.height} loading="lazy" />
-          <div className="stage-body">
-            <h3 className="stage-verb">{stage.verb}</h3>
+      <h2 id="making-title" className="section-title section-title--centre" data-reveal>How a candle is made</h2>
+      <ol className="stage-row">
+        {stages.map((stage) => (
+          <li className="stage" key={stage.verb} data-reveal>
+            <div className="stage-frame">
+              <img className="stage-photo" src={stage.image} alt={stage.alt} width={stage.width} height={stage.height} loading="lazy" />
+              <h3 className="stage-verb">{stage.verb}</h3>
+            </div>
             <p className="stage-text">{stage.text}</p>
-          </div>
-        </article>
-      ))}
+          </li>
+        ))}
+      </ol>
     </section>
   );
 }

@@ -4,13 +4,11 @@ export function useReveal() {
   useEffect(() => {
     document.documentElement.classList.add('js');
 
-    const targets = [...document.querySelectorAll('[data-reveal], .stage')];
-    targets
-      .filter((el) => el.matches('[data-reveal]'))
-      .forEach((el) => {
-        const position = Array.prototype.indexOf.call(el.parentNode.children, el);
-        el.style.setProperty('--delay', `${Math.min(position, 4) * 80}ms`);
-      });
+    const targets = [...document.querySelectorAll('[data-reveal]')];
+    targets.forEach((el) => {
+      const position = Array.prototype.indexOf.call(el.parentNode.children, el);
+      el.style.setProperty('--delay', `${Math.min(position, 4) * 80}ms`);
+    });
 
     if (!('IntersectionObserver' in window)) {
       targets.forEach((el) => el.classList.add('is-in'));
