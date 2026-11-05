@@ -5,9 +5,9 @@ import tableCandles from '../assets/photos/table-candles.webp';
 
 const shelves = [
   { href: '#scents', label: 'Scents', image: soyGlass, alt: 'A soy candle burning in a glass jar' },
+  { href: '#about', label: 'Our story', image: tableCandles, alt: 'Three candles in carved holders on a table by a window' },
   { href: '#making', label: 'Making', image: pillars, alt: 'Tall pillar candles burning against a dark wall' },
   { href: '#gallery', label: 'Gallery', image: votives, alt: 'Rows of votive candles burning in glass holders' },
-  { href: '#about', label: 'Our story', image: tableCandles, alt: 'Three candles in carved holders on a table by a window' },
 ];
 
 export default function Shelves() {

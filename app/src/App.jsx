@@ -28,9 +28,9 @@ export default function App() {
         <Hero scent={scent} onChoose={setScentId} />
         <Shelves />
         <Scents onAdd={bag.add} />
+        <About />
         <Making />
         <Gallery />
-        <About />
         <Visit />
       </main>
       <Footer />
