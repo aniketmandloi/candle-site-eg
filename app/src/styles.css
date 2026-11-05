@@ -12,7 +12,8 @@
   --footer: #000000;
   --footer-ink: #f7f3f4;
   --on-photo: #f7f3f4;
-  --radius: 0;
+  --radius: 999px;
+  --radius-media: 14px;
   --gutter: clamp(16px, 3vw, 40px);
   --step-small: 0.9375rem;
   --step-body: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);
@@ -309,6 +310,7 @@ a {
   position: relative;
   display: block;
   overflow: hidden;
+  border-radius: var(--radius-media);
   text-decoration: none;
 }
 
@@ -325,6 +327,7 @@ a {
 
 .shelf-label {
   position: absolute;
+  border-radius: var(--radius);
   left: 50%;
   bottom: 24px;
   transform: translateX(-50%);
@@ -423,6 +426,7 @@ a {
 
 .product-photo {
   width: 100%;
+  border-radius: var(--radius-media);
   aspect-ratio: 1;
   object-fit: cover;
   transition: transform 160ms ease;
@@ -501,7 +505,7 @@ a {
   width: min(420px, calc(100vw - 32px));
   padding: 32px;
   border: 0;
-  border-radius: var(--radius);
+  border-radius: var(--radius-media);
   background: var(--surface);
   color: var(--ink);
 }
@@ -584,6 +588,7 @@ a {
 .stage-frame {
   position: relative;
   overflow: hidden;
+  border-radius: var(--radius-media);
   background: var(--bar);
 }
 
@@ -636,14 +641,15 @@ a {
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
+  gap: 12px;
   margin: 0;
-  padding: 0;
+  padding: 0 var(--gutter);
   list-style: none;
 }
 
 .gallery-item {
   overflow: hidden;
+  border-radius: var(--radius-media);
 }
 
 .gallery-item img {
@@ -660,7 +666,7 @@ a {
 @media (max-width: 640px) {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 4px;
+    gap: 8px;
   }
 }
 
@@ -713,6 +719,7 @@ a {
 
 .about-photo {
   grid-column: 7 / -1;
+  border-radius: var(--radius-media);
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
