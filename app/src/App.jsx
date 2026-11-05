@@ -11,6 +11,7 @@ import Shelves from './components/Shelves.jsx';
 import Visit from './components/Visit.jsx';
 import { useBag } from './hooks/useBag.js';
 import { useReveal } from './hooks/useReveal.js';
+import { useSmoothScroll } from './hooks/useSmoothScroll.js';
 import { scents } from './data/scents.js';
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
   const [bagOpen, setBagOpen] = useState(false);
   const bag = useBag();
   useReveal();
+  useSmoothScroll();
   const scent = scents.find((item) => item.id === scentId);
 
   return (

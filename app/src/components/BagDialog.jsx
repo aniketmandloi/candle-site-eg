@@ -15,7 +15,7 @@ export default function BagDialog({ open, items, onClose }) {
   }, [open]);
 
   return (
-    <dialog ref={dialogRef} className="bag" aria-labelledby="bag-title" onClose={onClose}>
+    <dialog ref={dialogRef} className="bag" aria-labelledby="bag-title" onClose={onClose} data-lenis-prevent>
       <h2 id="bag-title" className="bag-title">Your bag</h2>
       {items.length === 0 ? (
         <p className="bag-empty">Your bag is empty.</p>
