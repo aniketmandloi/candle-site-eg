@@ -10,11 +10,9 @@ import Scents from './components/Scents.jsx';
 import Visit from './components/Visit.jsx';
 import { useBag } from './hooks/useBag.js';
 import { useReveal } from './hooks/useReveal.js';
-import { useTheme } from './hooks/useTheme.js';
 import { scents } from './data/scents.js';
 
 export default function App() {
-  const [theme, setTheme] = useTheme();
   const [scentId, setScentId] = useState(scents[0].id);
   const [bagOpen, setBagOpen] = useState(false);
   const bag = useBag();
@@ -24,12 +22,7 @@ export default function App() {
   return (
     <>
       <a className="skip-link" href="#main">Skip to content</a>
-      <Header
-        theme={theme}
-        onToggleTheme={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        bagCount={bag.items.length}
-        onOpenBag={() => setBagOpen(true)}
-      />
+      <Header bagCount={bag.items.length} onOpenBag={() => setBagOpen(true)} />
       <main id="main">
         <Hero scent={scent} onChoose={setScentId} />
         <Scents onAdd={bag.add} />
