@@ -7,6 +7,7 @@ import Footer from './components/Footer.jsx';
 import Gallery from './components/Gallery.jsx';
 import Making from './components/Making.jsx';
 import Scents from './components/Scents.jsx';
+import Shelves from './components/Shelves.jsx';
 import Visit from './components/Visit.jsx';
 import { useBag } from './hooks/useBag.js';
 import { useReveal } from './hooks/useReveal.js';
@@ -25,6 +26,7 @@ export default function App() {
       <Header bagCount={bag.items.length} onOpenBag={() => setBagOpen(true)} />
       <main id="main">
         <Hero scent={scent} onChoose={setScentId} />
+        <Shelves />
         <Scents onAdd={bag.add} />
         <Making />
         <Gallery />
