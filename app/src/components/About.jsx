@@ -23,7 +23,9 @@ export default function About() {
           </div>
         </dl>
       </div>
-      <img className="about-photo" src={bookCandle} alt="A candle burning beside an open book and reading glasses" width="1024" height="683" loading="lazy" data-reveal />
+      <div className="about-photo" data-reveal>
+        <img src={bookCandle} alt="A candle burning beside an open book and reading glasses" width="1024" height="683" loading="lazy" data-drift="36" />
+      </div>
     </section>
   );
 }

@@ -18,7 +18,7 @@ export default function Shelves() {
         {shelves.map((shelf) => (
           <li key={shelf.href} data-reveal>
             <a className="shelf" href={shelf.href}>
-              <img src={shelf.image} alt={shelf.alt} loading="lazy" />
+              <img src={shelf.image} alt={shelf.alt} loading="lazy" data-drift="24" />
               <span className="shelf-label">{shelf.label}</span>
             </a>
           </li>

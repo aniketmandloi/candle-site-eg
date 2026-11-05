@@ -718,7 +718,11 @@ a {
 
 .about-photo {
   grid-column: 7 / -1;
+  overflow: hidden;
   border-radius: var(--radius-media);
+}
+
+.about-photo img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -866,6 +870,10 @@ a {
   white-space: nowrap;
 }
 
+[data-drift] {
+  scale: 1.12;
+}
+
 [data-reveal] {
   transition: opacity 700ms ease var(--delay, 0ms), transform 700ms ease var(--delay, 0ms);
 }
@@ -886,5 +894,9 @@ a {
   .js [data-reveal]:not(.is-in) {
     opacity: 1;
     transform: none;
+  }
+
+  [data-drift] {
+    scale: none;
   }
 }

@@ -46,7 +46,7 @@ export default function Making() {
         {stages.map((stage) => (
           <li className="stage" key={stage.verb} data-reveal>
             <div className="stage-frame">
-              <img className="stage-photo" src={stage.image} alt={stage.alt} width={stage.width} height={stage.height} loading="lazy" />
+              <img className="stage-photo" data-drift="32" src={stage.image} alt={stage.alt} width={stage.width} height={stage.height} loading="lazy" />
               <h3 className="stage-verb">{stage.verb}</h3>
             </div>
             <p className="stage-text">{stage.text}</p>

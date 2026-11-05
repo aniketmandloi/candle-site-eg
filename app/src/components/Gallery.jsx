@@ -21,7 +21,7 @@ export default function Gallery() {
       <ul className="gallery-grid">
         {pictures.map((picture) => (
           <li key={picture.alt} className="gallery-item" data-reveal>
-            <img src={picture.image} alt={picture.alt} loading="lazy" />
+            <img src={picture.image} alt={picture.alt} loading="lazy" data-drift="28" />
           </li>
         ))}
       </ul>
