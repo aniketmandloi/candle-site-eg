@@ -1,32 +1,33 @@
-import flame from '../assets/photos/flame.jpg';
+import photo from '../assets/photos/hero-scented-candles.webp';
 import { scents } from '../data/scents.js';
 
 export default function Hero({ scent, onChoose }) {
   return (
-    <section className="hero" aria-labelledby="hero-title">
-      <h1 id="hero-title" className="hero-title">
-        Burns{' '}
-        <img className="hero-strip" src={flame} alt="a candle flame" width="1920" height="1277" />{' '}
-        for <span>{scent.hours}</span> hours.
-      </h1>
-      <p className="hero-lede" data-reveal>Small-batch candles, poured by hand. Every one is sold by how long it burns.</p>
-      <div className="scent-picker" data-reveal role="group" aria-label="Choose a scent">
-        {scents.map((item) => (
-          <button
-            key={item.id}
-            className="scent-chip"
-            type="button"
-            aria-pressed={item.id === scent.id}
-            onClick={() => onChoose(item.id)}
-          >
-            {item.name}
-          </button>
-        ))}
+    <section id="top" className="hero" aria-labelledby="hero-title">
+      <img className="hero-photo" src={photo} alt="Tea lights and a candle in a glass burning beside white roses on a dark table" width="1920" height="1281" />
+      <div className="hero-body">
+        <h1 id="hero-title" className="hero-title">
+          Burns for <span>{scent.hours}</span> hours.
+        </h1>
+        <p className="hero-lede">Small-batch candles, poured by hand and sold by how long they burn.</p>
+        <div className="scent-picker" role="group" aria-label="Choose a scent">
+          {scents.map((item) => (
+            <button
+              key={item.id}
+              className="scent-chip"
+              type="button"
+              aria-pressed={item.id === scent.id}
+              onClick={() => onChoose(item.id)}
+            >
+              {item.name}
+            </button>
+          ))}
+        </div>
+        <p className="scent-note" aria-live="polite">
+          {scent.name}: {scent.notes.toLowerCase()}. ${scent.price}.
+        </p>
+        <a className="button button--light hero-action" href="#scents">Shop the scents</a>
       </div>
-      <p className="scent-note" aria-live="polite">
-        {scent.name}. {scent.notes}.
-      </p>
-      <a className="button hero-action" href="#scents">Shop the scents</a>
     </section>
   );
 }
